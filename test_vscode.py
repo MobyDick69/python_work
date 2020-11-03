@@ -35,3 +35,43 @@ print(names)
 ######## Determinare il numero di elementi della lista: #############
 print(len(names))
 #####################################################################
+
+############################## LOOP  ################################
+frutta = ['pera', 'mela', 'ananas']
+print(frutta)
+for fruit in frutta:
+    print(f"Buona questa {fruit.upper()}")
+#####################################################################
+
+############################## RANGE ################################
+# Con la funzione range() si crea una serie numerica:
+prova = range(1,5)
+print(prova[3])
+# Si può convertire la serie creata in una list numerica:
+num_list = list(range(1,6,2))
+print(num_list)
+# range() è molto comoda da usare in for loops:
+for value in range(1,6):
+    print(value)
+#####################################################################
+
+########################### MIN,MAX,SUM #############################
+num_list = list(range(1,6))
+print(min(num_list),max(num_list),sum(num_list))
+#####################################################################
+
+########################## SLICING A LIST ############################
+frutta = ['pera', 'mela', 'ananas']
+print(frutta[0:2])
+print(frutta[:2])
+print(frutta[1:])
+print(frutta[-2:])
+for fruit in frutta[0:2]:
+    print(f"Buona questa {fruit.upper()}!")
+#####################################################################
+
+############################## TUPLE ################################
+# Analoghe alle liste, ma i cui elementi sono IMMUTABILI
+dimensioni = (10 , 45 , 20)
+for dim in dimensioni:
+    print(dim)
