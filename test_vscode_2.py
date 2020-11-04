@@ -80,3 +80,41 @@ if int(prova_input_num) >= 30:
     print("Ma allora sei vecchio!")
 else:
     print("Beh dai sei un g-g-giovane.")
+###############################################################################
+
+####################### Ex. 7-5 Python Crash Course ###########################
+# Write a loop asking user's age, charging a different ticket depending on it:
+flag = True
+while flag:
+    age_c = input("Please enter your age, so that we'll charge your ticket.\n"
+                  "(Enter 'shush' if you don't want to see the movie): ")
+    if age_c != 'shush':
+        age = int(age_c)
+        if age < 3:
+            print(f"As you are {age}, you can freely enter!\n")
+        elif 3 <= age < 12:
+            print(f"As you are {age}, you must pay $10.\n")
+        else:
+            print(f"As you are {age}, you must pay $15.\n")
+    else:
+        flag = False
+###############################################################################
+
+####################### Ex. 7-8 Python Crash Course ###########################
+# List of orders for sandwiches:
+sandwich_order = ['club' , 'tramezzino' , 'pastrami' , 'tuna' , 'pastrami']
+# List of completed sandwiches, initially empty:
+completed_sandwich = []
+# Prima, prendo gli ordini in ordine:
+sandwich_order.reverse()
+orders_in_ordine = sandwich_order[:]
+sandwich_order.reverse()
+# Loop through every order for sandwiches:
+while orders_in_ordine:
+    sandwich = orders_in_ordine.pop()
+    print(f"Stiamo facendo il sandwich: {sandwich}!")
+    completed_sandwich.append(sandwich)
+print("Qui la lista dei sandwich pronti:")
+for panino in completed_sandwich:
+    print(panino)
+###############################################################################
