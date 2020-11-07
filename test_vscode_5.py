@@ -55,3 +55,20 @@ with open(filename, encoding='utf-8') as f:
             dick_count += 1
     print(dick_count)
 ###############################################################################
+
+######################## Ex 10-11 Python Crash Course #########################
+# Importo il modulo json per salvare ed estrarre dati in file json:
+import json as j
+
+# Salvo input dell'user in un file json:
+filename = 'files\\fav_num.json'
+
+with open(filename, 'w') as file_obj:
+    fav_number = input("Qual'è il tuo numero preferito? ")
+    j.dump(fav_number, file_obj)
+
+# Leggo dal file json il numero salvato:
+with open(filename) as f:
+    fav_number_written = j.load(f)
+print(f"Il tuo numero preferito è: {fav_number_written}")
+###############################################################################
